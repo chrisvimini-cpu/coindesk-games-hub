@@ -1,0 +1,138 @@
+.gameCard {
+  display: flex;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 133px;
+  cursor: pointer;
+}
+
+.gameCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Accent Section (Left ~40%) */
+.cardAccent {
+  flex: 0 0 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardIcon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.cardIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Card Info Section (Right ~60%) */
+.cardInfo {
+  flex: 1;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.cardTitle {
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: 700;
+  color: #353536;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.cardDescription {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 400;
+  color: #353536;
+  margin: 0;
+  margin-top: 7px;
+  line-height: 1.3;
+}
+
+.playButton {
+  margin-top: 14px;
+  padding: 9px 20px;
+  background-color: #000000;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  align-self: flex-start;
+}
+
+.playButton:hover {
+  background-color: #1A1A1B;
+}
+
+.playButton:active {
+  transform: scale(0.98);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 480px) {
+  .cardAccent {
+    padding: 16px 12px;
+  }
+
+  .cardIcon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .playButton {
+    padding: 9px 20px;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+
+  .cardInfo {
+    padding: 16px 12px;
+    gap: 3px;
+  }
+
+  .cardTitle {
+    font-size: 22px;
+  }
+
+  .cardDescription {
+    font-size: 16px;
+    margin-top: 4px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+  .cardTitle {
+    font-size: 20px;
+  }
+
+  .cardDescription {
+    font-size: 15px;
+  }
+}
